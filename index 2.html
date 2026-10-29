@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portofolio | Riska Alfiana</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1b2e;--muted:#5d5a73;--white:#fff}
+/* warna tiap halaman: --bg latar pastel, --pop warna tegas */
+body[data-s="about"]{--bg:#ffd9d2;--pop:#ff5a43}
+body[data-s="skills"]{--bg:#fff0b3;--pop:#f2a900}
+body[data-s="achievement"]{--bg:#cdf0d8;--pop:#12a150}
+body[data-s="contact"]{--bg:#d3e2ff;--pop:#2f63f0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif;transition:background .45s}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.05}
+a{color:inherit}
+.bar{max-width:1000px;margin:auto;padding:22px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font:800 1.3rem Fraunces,serif;margin-right:auto;display:flex;align-items:center;gap:10px}
+.dot{width:14px;height:14px;border-radius:50%;background:var(--pop);transition:background .45s}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav button{font:600 .95rem Figtree,sans-serif;color:var(--ink);background:rgba(255,255,255,.55);border:0;border-radius:999px;padding:10px 20px;cursor:pointer;transition:background .2s,color .2s}
+nav button:hover{background:var(--white)}
+nav button[aria-selected="true"]{background:var(--pop);color:var(--white)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+main{max-width:1000px;margin:auto;padding:40px 24px 90px}
+section{display:none}
+section.active{display:block}
+h2{font-size:clamp(3rem,10vw,6.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:20px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:52ch;margin:0 0 40px}
+.card{background:var(--white);border-radius:28px;padding:32px}
+.profile{display:grid;grid-template-columns:220px 1fr;gap:24px}
+.photo{width:220px;aspect-ratio:1;border-radius:28px;background:var(--pop);color:var(--white);display:grid;place-items:center;font:800 4rem Fraunces,serif;overflow:hidden;transition:background .45s}
+.photo img{width:100%;height:100%;object-fit:cover}
+dl{display:grid;grid-template-columns:110px 1fr;gap:10px 16px;margin:0 0 24px}
+dt{color:var(--muted)}dd{margin:0;font-weight:600}
+.stats{display:flex;gap:36px;flex-wrap:wrap}
+.stats b{display:block;font:800 2.4rem Fraunces,serif;color:var(--pop)}
+.stats span{color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card h3{font-size:1.6rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.tags li{background:var(--bg);border-radius:999px;padding:6px 16px;font-weight:600;font-size:.95rem}
+.ach{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.ach li{display:grid;grid-template-columns:110px 1fr;gap:20px;background:var(--white);border-radius:28px;padding:28px 32px}
+.year{font:800 2rem Fraunces,serif;color:var(--pop)}
+.ach h3{font-size:1.4rem}
+.ach .org{font-weight:600;margin:4px 0;color:var(--ink)}
+.ach p{margin:0 0 10px;color:var(--muted)}
+.link{font-weight:600;color:var(--pop)}
+.contact{display:grid;gap:12px;max-width:560px}
+.contact a{display:flex;justify-content:space-between;gap:16px;padding:20px 26px;background:var(--white);border-radius:20px;text-decoration:none;font-weight:600;transition:transform .2s}
+.contact a:hover{transform:translateX(6px)}
+.contact small{color:var(--muted);font:400 .95rem Figtree,sans-serif;text-align:right}
+.contact .cta{background:var(--pop);color:var(--white);justify-content:center}
+footer{text-align:center;color:var(--muted);font-size:.9rem;padding:0 24px 32px}
+@media (max-width:640px){.profile{grid-template-columns:1fr}.photo{width:150px}.card{padding:24px}dl{grid-template-columns:90px 1fr}.ach li{grid-template-columns:1fr;gap:6px}.contact small{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body data-s="about">
+
+<header class="bar">
+  <div class="brand"><span class="dot"></span>Riska Alfiana</div>
+  <nav role="tablist" aria-label="Menu utama">
+    <button role="tab" data-t="about" aria-selected="true">About Me</button>
+    <button role="tab" data-t="skills" aria-selected="false">What I Can Do</button>
+    <button role="tab" data-t="achievement" aria-selected="false">Achievement</button>
+    <button role="tab" data-t="contact" aria-selected="false">Contact</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ABOUT ME -->
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p class="lead">Saya merupakan Mahasiswa Pendidikan Teknologi Informasi Universitas Negeri Surabaya yang tertarik pada bidang pendidikan, teknologi pembelajaran, serta pengembangan media pembelajaran berbasis digital. Memiliki motivasi untuk mengintegrasikan teknologi dalam proses pembelajaran guna menciptakan suasana belajar yang inovatif, kreatif, dan interaktif. Dilengkapi dengan kemampuan komunikasi yang baik, kerja sama tim, adaptasi, serta pemecahan masalah. Berorientasi pada pengembangan kompetensi pedagogik dan keterampilan teknologi secara berkelanjutan untuk menjadi pendidik profesional yang kompeten dan responsif terhadap perkembangan teknologi di bidang pendidikan.</p>
+    <div class="profile">
+      <div class="photo" aria-label="Foto profil">
+        <!-- Ganti "NK" dengan: <img src="foto.jpg" alt="Foto saya"> -->
+         <img src="pas foto.png" alt="Foto Riska Alfiana">
+      </div>
+      <div class="card">
+        <dl>
+          <dt>Nama</dt><dd>Riska Alfiana</dd>
+          <dt>NIM</dt><dd>26050974068</dd>
+          <dt>Prodi</dt><dd>Pendidikan Teknologi Informasi</dd>
+          <dt>Pendidikan</dt><dd>S1 Pendidikan Teknologi Informasi, Universitas Negeri Surabaya (2026 – sekarang)</dd>
+          <dt>Aktivitas</dt><dd>Belajar Mysql, Python</dd>
+        </dl>
+        <div class="stats">
+          <div><b>1</b><span>Pengalaman PKL</span></div>
+          <div><b>2</b><span>Pengalaman Organisasi</span></div>
+          <div><b>2026</b><span>Angkatan</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I CAN DO -->
+  <section id="skills">
+    <h2>What I Can Do</h2>
+    <p class="lead">Kemampuan dan tools yang saya kuasai saat ini.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Skill</h3>
+        <p>Hal yang bisa saya kerjakan.</p>
+        <ul class="tags"><li>Pembuatan website dasar</li><li>Pemecahan masalah</li><li>Dasar algoritma</li><li>Kerja tim</li><li>Komunikasi</li></ul>
+      </div>
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Alat yang biasa saya gunakan.</p>
+        <ul class="tags"><li>Microsoft PowerPoint</li><li>MySQL</li><li>Python</li><li>VS Code</li><li>Microsoft Word</li><li>Anaconda</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENT -->
+  <section id="achievement">
+    <h2>Achievement</h2>
+    <p class="lead">Pencapaian yang menunjukkan kemampuan, pengalaman, dan perkembangan saya.</p>
+    <ul class="ach">
+      <li>
+        <div class="year">2023-2025</div>
+        <div>
+          <h3>Menjabat sebagai pengurus OSIS & MPK</h3>
+          <p class="org">SMKN 2 Bojonegoro</p>
+          <p>OSIS 1 Periode & MPK 1 Periode</p>
+          <a class="link" href="https://drive.google.com/file/d/1xYhCr28mAqQvbsDUCB967GmP1ZhhSIcX/view?usp=drivesdk" target="_blank" rel="noopener">Lihat bukti / dokumentasi</a>
+        </div>
+      </li>
+      <li>
+        <div class="year">2025-2026</div>
+        <div>
+          <h3>Magang/PKL di Biznet Branch Bojonegoro</h3>
+          <p class="org">PT Supra Primatama</p>
+          <p>Selama 6 Bulan.</p>
+          <a class="link" href="https://drive.google.com/file/d/1yj8DEEI58UjRVQ3uSlwECjAhnaWf0XzO/view?usp=drivesdk" target="_blank" rel="noopener">Lihat bukti / dokumentasi</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="lead">Tertarik berkolaborasi atau ingin bertanya? Hubungi saya lewat salah satu jalur ini.</p>
+    <div class="contact">
+      <a href="mailto:riskaalfiana218@gmail.com">Email <small>riskaalfiana218@gmail.com</small></a>
+      <a href="https://github.com/Riska-Alfiana21" target="_blank" rel="noopener">GitHub <small>github.com/Riska-Alfiana21</small></a>
+      <a href="https://www.linkedin.com/in/riska-alfiana-77a170441?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener">LinkedIn <small>linkedin.com/in/Riska Alfiana</small></a>
+      <a href="https://drive.google.com/file/d/1Z3-D5HG2IFxpspwh1R3nS6yiWeN46lf4/view?usp=drivesdk" download class="cta">Unduh CV / Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Riska Alfiana</footer>
+
+<script>
+const tabs=[...document.querySelectorAll('nav button')],secs=[...document.querySelectorAll('section')];
+function show(id){
+  if(!secs.some(s=>s.id===id))id='about';
+  document.body.dataset.s=id;
+  secs.forEach(s=>s.classList.toggle('active',s.id===id));
+  tabs.forEach(b=>b.setAttribute('aria-selected',b.dataset.t===id));
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  window.scrollTo(0,0);
+}
+tabs.forEach(b=>b.addEventListener('click',()=>show(b.dataset.t)));
+show(location.hash.slice(1));
+</script>
+</body>
+</html>
